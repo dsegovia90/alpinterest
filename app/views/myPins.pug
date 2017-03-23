@@ -1,12 +1,11 @@
 include includes/head
 body
 	
-	-var subtitle = 'Home'
+	-var subtitle = 'My Wall'
 	include includes/nav
 	.container.is-clearfix
 		.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200, "gutter": 10, "fitWidth": true }')
-			each pin in pins
-				-var userLink = 'user/' + pin.ownerId
+			each pin in myPins
 				.grid-item
 					.card
 						.card-image
@@ -16,6 +15,11 @@ body
 							.media
 								.media-content
 									p.subtitle= pin.description
+								if user.twitter.id == pin.ownerId
+									-var deleteLink = 'delete/' + pin._id
+									.media-right
+										a(href=deleteLink)
+											i.fa.fa-times(title='Delete Pin')
 							.content.has-text-right
 								small= 'by '
-									a(href=userLink)= pin.ownerDisplayName
+									a(href='#')= pin.ownerDisplayName

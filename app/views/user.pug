@@ -1,12 +1,11 @@
 include includes/head
 body
 	
-	-var subtitle = 'Home'
+	-var subtitle = userWall + '\'s Wall'
 	include includes/nav
 	.container.is-clearfix
 		.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200, "gutter": 10, "fitWidth": true }')
-			each pin in pins
-				-var userLink = 'user/' + pin.ownerId
+			each pin in userPins
 				.grid-item
 					.card
 						.card-image
@@ -18,4 +17,4 @@ body
 									p.subtitle= pin.description
 							.content.has-text-right
 								small= 'by '
-									a(href=userLink)= pin.ownerDisplayName
+									a(href='#')= pin.ownerDisplayName

@@ -1,0 +1,22 @@
+include includes/head
+body
+	
+	-var subtitle = 'New Pin'
+	include includes/nav
+	
+	.column.is-6.is-offset-3
+		form(method='post' action='/newpin')
+			.field
+				label.label.has-text-centered imgUrl
+				p.control
+					input.input(type='text' name='url' required)
+			br
+			.field
+				label.label.has-text-centered Description
+				p.control
+					input.input(type='text' name='description' required)
+			br
+			br
+			.field
+				p.control
+					input.input.button.is-primary(type='submit' value='Submit')

@@ -17,13 +17,17 @@ section.hero.is-dark.is-bold
 							a(class='nav-item' href='/auth/twitter') Login 
 								i.fa.fa-twitter(aria-hidden='true')
 						else
-							a(class='nav-item' href='logout') Logout
+							a(class='nav-item' href='/newpin') Add Pin
+
+							a(class='nav-item' href='/mypins') My Pins
+							
+							a(class='nav-item' href='/logout') Logout
 								i.fa.fa-twitter(aria-hidden='true')
 		.hero-body
 			.container
 				a(href='/')
 					h1.title Alpinterest!
-				h2.subtitle Test
+				h2.subtitle= subtitle
 		.hero-foot
 			.container.has-text-right
 				p
