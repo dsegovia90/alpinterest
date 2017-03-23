@@ -1,0 +1,31 @@
+section.hero.is-dark.is-bold
+		.hero-head
+			nav.nav
+				span#nav-toggle.nav-toggle.nav-mobile
+					span
+					span
+					span
+				.nav-left
+					if user
+						a= 'Hello ' + user.twitter.displayName
+					else
+						a(href='/auth/twitter')= 'Please Log In!'
+				.nav-right
+					#nav-menu.nav-right.nav-menu.nav-mobile
+						a(class='nav-item' href='/') Home
+						if !user
+							a(class='nav-item' href='/auth/twitter') Login 
+								i.fa.fa-twitter(aria-hidden='true')
+						else
+							a(class='nav-item' href='logout') Logout
+								i.fa.fa-twitter(aria-hidden='true')
+		.hero-body
+			.container
+				a(href='/')
+					h1.title Alpinterest!
+				h2.subtitle Test
+		.hero-foot
+			.container.has-text-right
+				p
+					small= 'Made by '
+						a(href='https://github.com/sego90' target='_blank') Daniel S.  
