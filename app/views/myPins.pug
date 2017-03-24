@@ -1,7 +1,7 @@
 include includes/head
 body
 	
-	-var subtitle = 'My Wall'
+	-var subtitle = 'My Pins'
 	include includes/nav
 	.container.is-clearfix
 		.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200, "gutter": 10, "fitWidth": true }')
@@ -23,3 +23,4 @@ body
 							.content.has-text-right
 								small= 'by '
 									a(href='#')= pin.ownerDisplayName
+script(src='../js/scripts.js')

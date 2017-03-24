@@ -11,7 +11,7 @@ body
 					.card
 						.card-image
 							figure.image
-								img(src=pin.url)
+								img.img(src=pin.url)
 						.card-content
 							.media
 								.media-content
@@ -19,3 +19,5 @@ body
 							.content.has-text-right
 								small= 'by '
 									a(href=userLink)= pin.ownerDisplayName
+
+script(src='../js/scripts.js')
