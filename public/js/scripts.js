@@ -26,8 +26,10 @@ $( window ).on('load', function() {
 			});
 		}
   });
-  
- 	$('.grid').masonry('layout');
+
+  setTimeout(function(){
+  	$('.grid').masonry('layout');
+  }, 250)
 
 
 });
