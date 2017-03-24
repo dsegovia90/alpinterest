@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( window ).on('load', function() {
     $('#nav-toggle').click(function(){
     	$('.nav-mobile').toggleClass('is-active');
     });
