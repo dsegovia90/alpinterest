@@ -20,5 +20,5 @@ NodeJs Modules:
 * passport
 * passport-twitter
 * pug
-  
-  
+
+Note: Database hosted on https://mlab.com/ and app hosted on https://www.heroku.com/
